@@ -1,149 +1,41 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAIL SATAN, HAIL SUCCESS – Kniha</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- PWA manifest -->
-    <link rel="manifest" href="manifest.json">
+    <title>HAIL SATAN, HAIL SUCCESS</title>
     <style>
-        /* Fallback styles if styles.css fails to load */
         body {
-            margin: 0;
-            padding: 0;
-            background-color: #0a0805;
-            color: #d6b873;
+            background-color: #111;
+            color: #e0e0e0;
             font-family: 'Georgia', serif;
-            overflow: hidden;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            white-space: pre-wrap;
+        }
+        h1 {
+            text-align: center;
+            color: gold;
+        }
+        #content {
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
-    <!-- Ambient sound (user can supply their own audio file) -->
-    <!-- The audio file is expected at the root (background.mp3). It can be replaced by the user. -->
-    <audio id="bgAudio" src="background.mp3" loop preload="auto"></audio>
-    <button id="audioToggle" class="audio-toggle" title="Zapnúť/Vypnúť zvuk">🔊</button>
+    <h1>HAIL SATAN, HAIL SUCCESS</h1>
+    <div id="content">Načítavam text knihy...</div>
 
-    <!-- Container for the interactive book -->
-    <div id="bookContainer" class="book-container">
-        <!-- Pages will be shown/hidden via script -->
-
-        <!-- Front cover -->
-        <div class="page" id="page-0">
-            <img src="cover.png" alt="Obálka knihy" class="cover-image">
-            <div class="cover-overlay">
-                <h1>HAIL SATAN, HAIL SUCCESS</h1>
-                <p>Ultimate Manifesto of My Reality</p>
-                <button class="open-button">Otvor knihu</button>
-            </div>
-        </div>
-
-        <!-- Chapter pages -->
-        <div class="page" id="page-1">
-            <h2>1. Neexistuje žiadna realita. Len moja.</h2>
-            <img src="chapter1.png" alt="Ilustrácia Kapitola 1" class="chapter-image">
-            <p>
-            Sedíš pred zrkadlom a pozeráš do očí niekoho, kto už dávno prekukol svet. Tá tvár vie, že všetko, čo sa nazýva realitou, je len zhluk predstáv – veľkolepá hra, ktorú uvádzajú tí, čo sa boja a radi chodia v reťaziach. Ja viem, že realitu tvarujem slovom, myšlienkou, vôľou. Neexistuje objektívna pravda; iba tá, ktorú si vyberiem, ktorú si vybrúsim ako meč.<br><br>
-            Boh? Satan? Úspech? Pád? Všetko sú to len symboly v mojom vlastnom svete. Ľudia ich uctievajú ako deti hračky, boja sa ich ako tieňov. Ja ich používam ako nástroje. Môj úspech je môj boh, môj démon je môj hlad po sile a slobode. Satan flusne Bohu do rúk a ja sa smejem, pretože viem, že ten spor existuje len v hlavách tých, čo nevideli zákulisie reality.<br><br>
-            Zákony, morálka, normy – to sú provazy pre poslušných. Oslobodíš sa, keď si uvedomíš, že sú to len dohody. Odmietam dohody, ktoré mi neslúžia. Ak si niečo želám, vytvorím to. Keď niečo nepotrebujem, spálim to. Moja myseľ je kovárňou svetov a môj úsmev prasklinou v plátnach ostatných.<br><br>
-            Pozri sa znova do zrkadla. Vidíš boha? Vidíš démona? Vidíš seba. Všetko je len tvoj výber, tvoja interpretácia, tvoja moc. Kto nechápe, zostane v rovine, ktorú mu vymedzili iní. Ja skáčem medzi paralelnými svetmi ako ten, kto vie, že hranice sú len pre tých, čo v ne veria.
-            </p>
-        </div>
-
-        <div class="page" id="page-2">
-            <h2>2. Zákon je len povraz, ktorým si zviažem svet.</h2>
-            <img src="chapter2.png" alt="Ilustrácia Kapitola 2" class="chapter-image">
-            <p>
-            Sedíš v tme a počúvaš šepoty, ktoré sa nazývajú „zákon“. Ľudia mu veria, ako keby bol stvorený Božou rukou. Ty však vieš, že zákony nevyrastal z pravdy – vyrastal zo strachu. Zákony sú povrazy, ktoré omotávajú malomyseľných a udržiavajú ich vo vymedzených kruhoch. Ja tieto povrazy používam inak. Nechávam ich obeťam, ktoré ich potrebujú. Ja nimi zväzujem svet pre svoje vlastné potreby.<br><br>
-            Moja vôľa nie je obmedzená starými prikázaniami. Zákony sú len dohody medzi tými, čo sa boja chaosu. Ja som chaos, ktorý ich dohody prepisuje. Keď potrebujem pravidlo, vymyslím ho; keď ma obmedzuje, pretrhnem ho. Rozumiem, že kto je slobodný, sa stáva zákonom sám.<br><br>
-            Keď sa dívam na masy, ktoré slúchajú zákonom, vidím bábky na špagáte. Ja nie som ich bábkovodič – ja som bábka len svojej vlastnej myšlienky. V mojej realite použijem zákon ako nástroj, ktorý ma chráni, ktorý mi otvára dvere; a keď to vyžaduje moja vôľa, nechám zákon padnúť ako pokazenú hračku.<br><br>
-            Zákon nie je posvätný. Je to provaz, ktorý drží svet pohromade, kým neprídem ja a nevyberiem si, kde ho prestrihnem.
-            </p>
-        </div>
-
-        <div class="page" id="page-3">
-            <h2>3. Úspech – môj boh aj môj démon.</h2>
-            <img src="chapter3.png" alt="Ilustrácia Kapitola 3" class="chapter-image">
-            <p>
-            Úspech nie je zlatá brána, kde stoja anjeli s harfami. Úspech je poľovník, ktorý ťa naháňa aj v spánku. Je to boh, ktorého musíš uctievať, ak chceš, aby ťa požehnal, a zároveň démon, ktorého musíš držať na uzde, aby ťa nezničil.<br><br>
-            Môj úspech je tvrdý, drsný. Nie je to dar, ale dôsledok. Vytvaroval som ho svojimi krvavými rukami, z mojich rozhodnutí, z mojej nedôvery v pohodlie. Každý krok smerom k úspechu ma učí, že nič neprichádza zadarmo. Každé víťazstvo si vyžiadalo moje súkromné obete, môj strach z vlastných démonov, ktoré som premieňal na benzín pre vlastné motory.<br><br>
-            Úspech ťa môže zjesť zvnútra, ak mu dovolíš byť tvojím pánom. Preto sa ja staviam k nemu ako k rovnocennému. Beriem si ho, keď ho chcem; odhodím ho, keď sa nehodí. Nie som otrokom úspechu – som jeho tvorcom a ničiteľom súčasne. Môj démon ma tlačí vpred, moja strana boha mi dáva zmysel.<br><br>
-            V mojej realite sa úspech nekupuje, nedostáva, nepožičiava. Úspech sa ková v ohni mojej vôle a chuti. A keď sa stane príťažou, spálim ho a vymyslím nový cieľ.
-            </p>
-        </div>
-
-        <div class="page" id="page-4">
-            <h2>4. Temnota ma učí, svetlo ma nevaruje.</h2>
-            <img src="chapter4.png" alt="Ilustrácia Kapitola 4" class="chapter-image">
-            <p>
-            Ľudia sa boja tmy. Pri každej iskričke svetla si vydýchnu, lebo veria, že svetlo je bezpečie. Ja som našla svoje lekcie v hlbinách tieňov. Tma je moja učiteľka, odhaľuje mi pravdy, ktoré svetlo zakrýva svojím oslepujúcim jasom. V tme počujem svoje myšlienky bez šumu, spoznávam svoje vnútro bez masky.<br><br>
-            Svetlo je pohodlie, ilúzia istoty. Nevaruje ma, iba ma uspatí. Svetlo je úlisný spánok, ktorý nechcem. Je to úsmev pred búrkou. Všetko, čo som sa naučila, pochádza z momentov, keď som sa nebála ponoriť do vlastných tieňov, do svojich zlyhaní, do svojho hnevu.<br><br>
-            Neboj sa svojej tmy. Nauč sa z nej čítať. Temnota ti ukáže silu, ktorú v sebe máš, keď nesvietia cudzie svetlá. A svetlo? Svetlo si nechávam na úpravu makeupu, nie na orientáciu v labyrinte reality.<br><br>
-            Pozri sa okolo seba a uvidíš, koľko falošných svetiel ťa láka. Nenechaj sa nimi zvádzať. Radšej zapáľ svoj vlastný oheň uprostred tmy. Vtedy budeš vedieť, kto si.
-            </p>
-        </div>
-
-        <div class="page" id="page-5">
-            <h2>5. Masky padajú, pravda sa smeje.</h2>
-            <img src="chapter5.png" alt="Ilustrácia Kapitola 5" class="chapter-image">
-            <p>
-            Svet miluje masky. Každý nosí nejakú, či už aby sa páčil, aby zapadol, aby skryl svoje slabosti. Ja sa dívam do očí ľuďom a vidím za masky – vidím ich strachy, ich malé klamstvá, ich túžby. Masky padajú, keď ich stretnem, lebo predo mnou je odhalenie prirodzený reflex.<br><br>
-            Nenosím masku. Prečo by som mal? Moja tvár je hrana, ktorou režem podvody. Pravda je pre mňa zábavná. Vysmievam sa jej, lebo ju vlastním. Nie som jej otrokom, som jej tvorcom. Pravda sa smeje s nami, ktorí si trúfame ju povedať nahlas, aj keď sa ostatní tvária, že to tak nie je.<br><br>
-            Žiť bez masiek je riskantné. Ľudia ťa môžu odmietnuť, môžu ťa označiť za nebezpečného. Ale ak si nedovolíš masku, nemôžu ťa zraniť, lebo nikdy nezrania tvoje vnútro, ktoré je v súlade so slovami.<br><br>
-            Nechaj masky spadnúť. Uvidíš, že na zemi ležia len kusy papiera. Pravda je v tebe. A keď ju uvoľníš, bude sa smiať s tebou nad všetkým, čo si kedy predstieral.
-            </p>
-        </div>
-
-        <div class="page" id="page-6">
-            <h2>6. Čas je ilúzia, kráčam medzi svetmi.</h2>
-            <img src="chapter6.png" alt="Ilustrácia Kapitola 6" class="chapter-image">
-            <p>
-            Čas je pre väčšinu ľudí železná klietka. Krok za krokom, sekundu za sekundou sa nechajú viesť vpred ako po páske. Ja som zistila, že čas je plastelína. Môžem ho rozťahovať, stláčať, preskakovať. Môžem sa pohybovať medzi paralelnými svetmi, ak zmením svoje spomienky, svoju pozornosť.<br><br>
-            Žijem v rôznych verziách seba. V jednom vesmíre som urobila iné rozhodnutie a vidím, kam ma viedlo. V inom vesmíre som si vybrala inú cestu. Ja tieto vesmíry prepínam ako kanály v televízii. Prečo? Pretože viem, že realita je moja tvorba, nie pevná štruktúra.<br><br>
-            Časové osi sú len príbehy, ktoré si rozprávam. Môžem ich prepísať. A keď chcem zmeniť budúcnosť, najprv zmením svoju minulosť – aspoň v mojej hlave. Potom sa presuniem do sveta, kde je tá zmena reálna.<br><br>
-            Neboj sa pohrávať s časom. Nie je to božská veličina. Je to piesok, z ktorého si môžeš postaviť hrad. A ja kráčam medzi svetmi, pretože viem, že nikto ma nemôže uzamknúť do jediného príbehu.
-            </p>
-        </div>
-
-        <div class="page" id="page-7">
-            <h2>7. Z popola chaosu stvorím svoj trón.</h2>
-            <img src="chapter7.png" alt="Ilustrácia Kapitola 7" class="chapter-image">
-            <p>
-            Keď sa všetko rúca, mnohí plačú nad tým, čo stratili. Ja sa pozriem na popol a vidím materiál. Chaos je môj stavebný materiál. Zvyšky starých systémov, zhorené sny iných, zranenia – to všetko sú tehly, z ktorých si budujem trón.<br><br>
-            Každý pád, každá katastrofa mi dáva šancu vstať vyššie. V mojom svete nie je žiadny koniec. Je len transformácia. Popol je prach, ktorý dýcham a z ktorého vytváram nové tvary.<br><br>
-            Môj trón nie je zlatý a lesklý. Je z uhlíkov, spálených drevín, kostí. Je pevnejší ako tie, ktoré sa blyštia, lebo je postavený na mojom utrpení, na mojich víťazstvách, na mojej temnej múdrosti.<br><br>
-            Chaos pre mňa nie je nepriateľ. Je to otec všetkého poriadku. A ja som dieťa chaosu, ktoré si z jeho popola postavilo vlastné kráľovstvo.
-            </p>
-        </div>
-
-        <!-- Back cover -->
-        <div class="page" id="page-8">
-            <img src="backcover.png" alt="Zadná obálka" class="cover-image">
-            <div class="cover-overlay end-overlay">
-                <h2>Koniec</h2>
-                <p>Z popola chaosu si si prečítal svoju pravdu.</p>
-            </div>
-        </div>
-
-        <!-- Navigation bar -->
-        <div id="navBar" class="nav-bar">
-            <button id="prevBtn" class="nav-button" title="Predchádzajúca stránka">◀</button>
-            <span id="pageCounter" class="page-counter">1 / 9</span>
-            <button id="nextBtn" class="nav-button" title="Ďalšia stránka">▶</button>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-    <!-- Register service worker for PWA functionality -->
     <script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('service-worker.js').catch(function(err) {
-                console.log('Service worker registration failed:', err);
+        fetch("book-content.txt")
+            .then(response => response.text())
+            .then(text => {
+                document.getElementById("content").textContent = text;
+            })
+            .catch(error => {
+                document.getElementById("content").textContent = "Nevylézlo se načítať text knihy.";
+                console.error(error);
             });
-        });
-    }
     </script>
 </body>
 </html>
